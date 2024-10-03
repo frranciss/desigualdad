@@ -11,8 +11,8 @@ library(gganimate)
 library(sf)
 library(rsconnect)
 getwd()
-setwd("C:/Directorio")
-datos <- read.csv("Aplicacion/contarcondatos/data/Tabla.csv", fileEncoding = "Latin1")
+
+datos <- read.csv("contarcondatos/data/Tabla.csv", fileEncoding = "Latin1")
 
 paises <- unique(datos$Pais)
 variables_x <- setdiff(names(datos), c("Pais", "Año", "Brecha"))
@@ -22,7 +22,7 @@ coordenadas_paises <- data.frame(
   lat = c(-34.61, -14.23, -33.45, 4.61, -0.18, -25.30, -9.19, -34.90),
   lng = c(-58.38, -51.92, -70.65, -74.08, -78.47, -57.63, -77.03, -56.19))
 
-poligonos <- st_read("Aplicacion/contarcondatos/mapa")
+poligonos <- st_read("contarcondatos/mapa2")
 
 normalizar_nombre_pais <- function(pais) {
   pais %>%
