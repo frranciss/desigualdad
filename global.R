@@ -22,7 +22,7 @@ coordenadas_paises <- data.frame(
   lat = c(-34.61, -14.23, -33.45, 4.61, -0.18, -25.30, -9.19, -34.90),
   lng = c(-58.38, -51.92, -70.65, -74.08, -78.47, -57.63, -77.03, -56.19))
 
-poligonos <- st_read("contarcondatos/mapa2")
+poligonos <- st_read("contarcondatos/mapa")
 
 normalizar_nombre_pais <- function(pais) {
   pais %>%
